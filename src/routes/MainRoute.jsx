@@ -8,8 +8,8 @@ function MainRoute() {
   return useRoutes([
     { path: "/", element: <Inputs /> },
     { path: "/acuttis-frontend/", element: <Inputs /> },
-    { path: "/history", element: <History /> },
-    { path: "/acuttis-frontend/history", element: <History /> },
+    { path: "/history/", element: <History /> },
+    { path: "/acuttis-frontend/history/", element: <History /> },
   ]);
 }
 
