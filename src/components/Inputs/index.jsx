@@ -47,6 +47,10 @@ function Inputs() {
       //http://localhost:8888/
       //"http://acuttis-backend.vercel.app/
       //https://acurris-render-backend.onrender.com/
+
+      //utilizamos nossa api hospedada no render gratuitamente
+      //escrevi acuttis errado :(
+
       const res = await axios.get("https://acurris-render-backend.onrender.com/calcula/", { params: data });
       console.log("res ", res);
 
