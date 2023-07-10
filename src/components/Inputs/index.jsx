@@ -44,9 +44,11 @@ function Inputs() {
     const inputValues = getValues();
 
     try {
-      const res = await axios.get("http://localhost:8888/calcula", {
-        params: data,
-      });
+      //http://localhost:8888/
+      //"http://acuttis-backend.vercel.app/
+      //https://acurris-render-backend.onrender.com/
+      const res = await axios.get("https://acurris-render-backend.onrender.com/calcula/", { params: data });
+      console.log("res ", res);
 
       setDisplayResponse(res.data);
 
@@ -64,9 +66,9 @@ function Inputs() {
     }
   };
 
-  const closeModal = () =>{
+  const closeModal = () => {
     thisModal?.close();
-  }
+  };
 
   return (
     <div className="section app-inputs">
