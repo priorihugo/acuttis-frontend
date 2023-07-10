@@ -1,0 +1,69 @@
+.app-logo {
+  padding: 4px;
+}
+
+.app-inputs {
+  gap: 5px;
+  padding: 50px;
+}
+
+.app-btn {
+  display: flex;
+  width: 100%;
+}
+
+.app-navbar{
+  padding: 20px 0px;
+}
+
+.app-modal {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.app-input-group {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 20px;
+  justify-content: space-between;
+}
+
+.app-input-group > h1 {
+  width: 50%;
+  font-size: 3rem;
+}
+
+.app-input-group > .row {
+  width: 50%;
+}
+.app-input-group > .row > .input-field {
+  width: 50%;
+  flex-direction: row;
+}
+
+.app-input-group > .row > .input-field > input {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .app-input-group {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+  .app-input-group > h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .app-input-group > .row {
+    width: 100%;
+  }
+}
