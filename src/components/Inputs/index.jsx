@@ -44,7 +44,9 @@ function Inputs() {
     const inputValues = getValues();
 
     try {
-      const res = await axios.get("http://localhost:8888/", { params: data });
+      const res = await axios.get("http://localhost:8888/calcula", {
+        params: data,
+      });
 
       setDisplayResponse(res.data);
 
@@ -61,6 +63,10 @@ function Inputs() {
       setIsLoading(false);
     }
   };
+
+  const closeModal = () =>{
+    thisModal?.close();
+  }
 
   return (
     <div className="section app-inputs">
@@ -125,7 +131,7 @@ function Inputs() {
             //
           }
           <a
-            className="btn app-btn waves-effect waves-light modal-trigger"
+            className="btn app-btn waves-effect waves-light"
             href="#modal1"
             type="button"
             onClick={handleSubmit(handleConfirm)}
@@ -135,7 +141,7 @@ function Inputs() {
         </form>
       </div>
 
-      <ModalResultado ref={modalRef} displayResponse={displayResponse} />
+      <ModalResultado close={closeModal} displayResponse={displayResponse} />
     </div>
   );
 }
